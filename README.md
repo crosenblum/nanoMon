@@ -6,6 +6,8 @@ nanoMon is a lightweight Docker monitoring dashboard written in Python.
 
 It is intended to provide a quick snapshot of Docker containers without the complexity of full monitoring platforms such as Grafana or Prometheus.
 
+![nanoMon Dashboard](nanoMon_screenshot.png)
+
 The dashboard displays:
 
 * Total container count
