@@ -1,0 +1,243 @@
+/* Base (default): keep Bootstrap look */
+:root {
+  --theme-bg: #f8f9fa;     /* light */
+  --theme-text: #212529;   /* dark */
+}
+
+/* Use a theme-friendly page background */
+body {
+  background-color: var(--theme-bg) !important;
+  color: var(--theme-text) !important;
+}
+
+/* Ensure your card headers keep readable text */
+.card-header.text-white {
+  color: #fff !important;
+}
+
+/* Theme palettes: these values are curated so text remains readable */
+:root[data-theme="emerald"]{
+  --theme-bg: #f1f8f5;
+  --bs-primary: #20c997;
+  --bs-secondary: #5c636a;
+  --bs-success: #12b886;
+  --bs-dark: #1f2937;
+  --bs-light: #f1f3f5;
+
+  /* Card/table header backgrounds that use .bg-success/.bg-secondary/.table-dark */
+  --table-dark-bg: #0b3b2f;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="midnight"]{
+  --theme-bg: #0b1220;
+  --theme-text: #e5e7eb;
+
+  --bs-primary: #4f46e5;
+  --bs-secondary: #94a3b8;
+  --bs-success: #22c55e;
+  --bs-dark: #0b1220;
+  --bs-light: #111827;
+
+  --table-dark-bg: #0f172a;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="sunset"]{
+  --theme-bg: #fff4f2;
+
+  --bs-primary: #f97316;
+  --bs-secondary: #64748b;
+  --bs-success: #fb7185; /* fun “success” scheme; still readable */
+  --bs-dark: #111827;
+  --bs-light: #fff7f7;
+
+  --table-dark-bg: #312e81;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="amethyst"]{
+  --theme-bg: #f5f3ff;
+
+  --bs-primary: #8b5cf6;
+  --bs-secondary: #6b7280;
+  --bs-success: #34d399;
+  --bs-dark: #1f2937;
+  --bs-light: #f3f4ff;
+
+  --table-dark-bg: #4c1d95;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="slate"]{
+  --theme-bg: #f1f5f9;
+
+  --bs-primary: #0ea5e9;
+  --bs-secondary: #64748b;
+  --bs-success: #38bdf8;
+  --bs-dark: #0f172a;
+  --bs-light: #f8fafc;
+
+  --table-dark-bg: #0f172a;
+  --table-dark-color: #ffffff;
+}
+
+/* Your tables use <thead class="table-dark">, so we override that */
+.table-dark {
+  --bs-table-bg: var(--table-dark-bg, #343a40) !important;
+  --bs-table-color: var(--table-dark-color, #ffffff) !important;
+  background-color: var(--table-dark-bg, #343a40) !important;
+  color: var(--table-dark-color, #ffffff) !important;
+}
+
+/* Optional: improve hover contrast slightly across themes */
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,0.04) !important;
+}
+:root[data-theme="midnight"] .table-hover tbody tr:hover {
+  background-color: rgba(255,255,255,0.06) !important;
+}
+:root[data-theme="mint"]{
+  --theme-bg: #f0fff8;
+
+  --bs-primary: #2dd4bf;
+  --bs-secondary: #6b7280;
+  --bs-success: #34d399;
+  --bs-dark: #0f172a;
+  --bs-light: #f8fafc;
+
+  --table-dark-bg: #042f2e;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="forest"]{
+  --theme-bg: #f3fbf6;
+
+  --bs-primary: #16a34a;
+  --bs-secondary: #4b5563;
+  --bs-success: #22c55e;
+  --bs-dark: #0f2a1b;
+  --bs-light: #f7faf8;
+
+  --table-dark-bg: #063b22;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="cobalt"]{
+  --theme-bg: #f3f7ff;
+
+  --bs-primary: #2563eb;
+  --bs-secondary: #64748b;
+  --bs-success: #22c55e;
+  --bs-dark: #0b1b3a;
+  --bs-light: #eef3ff;
+
+  --table-dark-bg: #0b1b3a;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="royal"]{
+  --theme-bg: #f3f1ff;
+
+  --bs-primary: #4f46e5;
+  --bs-secondary: #6b7280;
+  --bs-success: #22c55e;
+  --bs-dark: #111827;
+  --bs-light: #f5f3ff;
+
+  --table-dark-bg: #1f1b4d;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="rose-gold"]{
+  --theme-bg: #fff5f7;
+
+  --bs-primary: #f43f5e;
+  --bs-secondary: #94a3b8;
+  --bs-success: #10b981;
+  --bs-dark: #3b1d2a;
+  --bs-light: #fff1f2;
+
+  --table-dark-bg: #4c1d2d;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="ember"]{
+  --theme-bg: #fff6ed;
+
+  --bs-primary: #ea580c;
+  --bs-secondary: #64748b;
+  --bs-success: #22c55e;
+  --bs-dark: #2a1200;
+  --bs-light: #fff7ed;
+
+  --table-dark-bg: #2a1400;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="amber"]{
+  --theme-bg: #fffbeb;
+
+  --bs-primary: #d97706;
+  --bs-secondary: #6b7280;
+  --bs-success: #22c55e;
+  --bs-dark: #3f2a00;
+  --bs-light: #fffaf0;
+
+  --table-dark-bg: #2d2200;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="teal-slate"]{
+  --theme-bg: #f0fdfa;
+
+  --bs-primary: #0d9488;
+  --bs-secondary: #64748b;
+  --bs-success: #34d399;
+  --bs-dark: #0f172a;
+  --bs-light: #ecfeff;
+
+  --table-dark-bg: #083344;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="violet"]{
+  --theme-bg: #f7f5ff;
+
+  --bs-primary: #7c3aed;
+  --bs-secondary: #6b7280;
+  --bs-success: #22c55e;
+  --bs-dark: #1f1147;
+  --bs-light: #f3ecff;
+
+  --table-dark-bg: #2a155f;
+  --table-dark-color: #ffffff;
+}
+
+:root[data-theme="slate-night"]{
+  --theme-bg: #f1f5f9;
+
+  --bs-primary: #64748b;
+  --bs-secondary: #94a3b8;
+  --bs-success: #38bdf8;
+  --bs-dark: #0b1220;
+  --bs-light: #f8fafc;
+
+  --table-dark-bg: #0b1220;
+  --table-dark-color: #ffffff;
+}
+.theme-switch-wrap {
+  background: #ffffff !important;
+  border-radius: .375rem;
+  padding: .5rem .75rem;
+}
+
+/* Keep the control readable no matter what the page theme is */
+.theme-switch-wrap label {
+  color: #6c757d !important;
+}
+
+.theme-switch {
+  background-color: #ffffff !important;
+  color: #212529 !important;
+}
